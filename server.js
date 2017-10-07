@@ -127,8 +127,8 @@ app.put('/recipes/:id', jsonParser, (req, res) => {
     console.error(message);
     return res.status(400).send(message);
   }
-  console.log(`Updating recipex item \`${req.params.id}\``);
-  ShoppingList.update({
+  console.log(`Updating recipes item \`${req.params.id}\``);
+  Recipes.update({
     id: req.params.id,
     name: req.body.name,
     ingredients: req.body.ingredients
